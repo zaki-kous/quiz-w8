@@ -10,14 +10,14 @@ export PYTHONPATH=$PYTHONPATH:$DIR:$DIR/slim:$DIR/object_detection
 
 # 定义各目录
 output_dir=/output  # 训练目录
-dataset_dir=/data/ai100/quiz-w8 # 数据集目录，这里是写死的，记得修改
+dataset_dir=/data/z-top/quiz-w8 # 数据集目录，这里是写死的，记得修改
 
 train_dir=$output_dir/train
 checkpoint_dir=$train_dir
 eval_dir=$output_dir/eval
 
 # config文件
-config=ssd_mobilenet_v1_pets.config
+config=pipeline.config
 pipeline_config_path=$output_dir/$config
 
 # 先清空输出目录，本地运行会有效果，tinymind上运行这一行没有任何效果
